@@ -1,0 +1,113 @@
+ /* Base styles */
+ .book-showcase {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Book showcase container */
+.book-showcase {
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-showcase h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+/* Book grid using flexbox */
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 8px;
+}
+
+/* Individual book card */
+.book-card {
+    color:#f8f9fa;
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.book-description {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px darkslategray;
+}
+
+/* Book links */
+.book-links {
+    display: flex;
+    gap: 10px;
+}
+
+.book-link {
+    flex: 1;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    text-shadow: none;
+}
+
+.paperback-link {
+    background-color: #146eb4;
+    color: white;
+}
+
+.paperback-link:hover {
+    background-color: #115991;
+}
+
+.kindle-link {
+    background-color: #ff9900;
+    color: white;
+}
+
+.kindle-link:hover {
+    background-color: rgb(218, 131, 0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .book-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
