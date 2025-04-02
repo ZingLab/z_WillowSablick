@@ -103,7 +103,7 @@ h3, h4, h5, h6 {
 
 /* Hero section */
 .hero {
-    min-height: 300px;
+    min-height: 50px;
     background-size: cover;
     background-position: center;
     color: white;
@@ -540,5 +540,241 @@ section {
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+    }
+}
+
+
+/* Story Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+.lifestyle-favorites-container {
+    max-width: 950px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.favorites-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f5d6eb;
+    margin-right: 20px;
+    background-size: cover;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #d64f9d;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #777;
+    font-weight: 300;
+}
+
+.intro-section {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.favorites-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.favorite-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.favorite-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.favorite-image-container {
+    flex: 0 0 300px;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.favorite-item.reverse .favorite-image-container {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.favorite-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.favorite-image:hover {
+    transform: scale(1.03);
+}
+
+.favorite-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #d64f9d;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+.favorite-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.favorite-content p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+a {
+    color: #d64f9d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a52c75;
+    text-decoration: underline;
+}
+
+.favorite-cta {
+    margin-top: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #d64f9d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #a52c75;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(214, 79, 157, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+.closing-section {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    padding: 8px 15px;
+    border: 1px solid #d64f9d;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #d64f9d;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .favorite-item, .favorite-item.reverse {
+        flex-direction: column;
+    }
+    
+    .favorite-image-container, .favorite-item.reverse .favorite-image-container {
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .profile-info {
+        text-align: center;
     }
 }
